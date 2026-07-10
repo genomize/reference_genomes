@@ -1,0 +1,11 @@
+{
+  "ttl_s": 1800,
+  "ads": [
+    {
+      "id": "pacbio-hifi",
+      "url": "https://genomize.com/long-read-sequencing-pacbio-hifi-integration/",
+      "banner": "pacbio-longread.svg",
+      "weight": 100
+    }
+  ]
+}
