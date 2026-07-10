@@ -1,78 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 192" width="1640" height="192" fill="none" font-family="'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 140" width="1280" height="140" fill="none" font-family="'Helvetica Neue', Arial, sans-serif">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#271A2A"/>
-      <stop offset="0.55" stop-color="#1B1220"/>
-      <stop offset="1" stop-color="#130D18"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5F8FB"/>
     </linearGradient>
     <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FFA063"/>
+      <stop offset="0" stop-color="#FF9A5C"/>
       <stop offset="0.5" stop-color="#F0561F"/>
       <stop offset="1" stop-color="#FF7A40"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#F0561F" stop-opacity="0.42"/>
+      <stop offset="0" stop-color="#F0561F" stop-opacity="0.14"/>
       <stop offset="1" stop-color="#F0561F" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-25%" y="-60%" width="150%" height="220%">
-      <feGaussianBlur stdDeviation="6"/>
+    <filter id="soft" x="-25%" y="-70%" width="150%" height="240%">
+      <feGaussianBlur stdDeviation="5"/>
     </filter>
   </defs>
 
-  <!-- backdrop -->
-  <rect width="1640" height="192" fill="url(#bg)"/>
-  <ellipse cx="1320" cy="96" rx="470" ry="150" fill="url(#glow)"/>
+  <!-- light backdrop + hairline border -->
+  <rect x="0.5" y="0.5" width="1279" height="139" rx="10" fill="url(#bg)"/>
+  <ellipse cx="1090" cy="70" rx="290" ry="96" fill="url(#glow)"/>
+  <rect x="0.75" y="0.75" width="1278.5" height="138.5" rx="10" fill="none" stroke="#E6EAF0" stroke-width="1.5"/>
 
   <!-- brand dotted column (echoes the genomize logo) -->
-  <g fill="#F0561F" opacity="0.9">
-    <circle cx="40" cy="40" r="4.5"/><circle cx="40" cy="66" r="4.5"/>
-    <circle cx="40" cy="92" r="4.5"/><circle cx="40" cy="118" r="4.5"/>
-    <circle cx="40" cy="144" r="4.5"/>
+  <g fill="#F0561F">
+    <circle cx="40" cy="42" r="4"/><circle cx="40" cy="59" r="4"/>
+    <circle cx="40" cy="76" r="4"/><circle cx="40" cy="93" r="4"/>
+    <circle cx="40" cy="110" r="4"/>
   </g>
 
   <!-- short reads: fragments flowing toward the long read -->
-  <g fill="#5FD0BE">
-    <rect x="872" y="64"  width="74" height="9" rx="4.5" opacity="0.85"/>
-    <rect x="898" y="100" width="56" height="9" rx="4.5" opacity="0.6"/>
-    <rect x="930" y="46"  width="50" height="9" rx="4.5" opacity="0.5"/>
-    <rect x="946" y="128" width="66" height="9" rx="4.5" opacity="0.8"/>
-    <rect x="972" y="82"  width="46" height="9" rx="4.5" opacity="0.55"/>
-    <rect x="990" y="112" width="42" height="9" rx="4.5" opacity="0.45"/>
-    <rect x="1006" y="58" width="54" height="9" rx="4.5" opacity="0.7"/>
-    <rect x="1016" y="138" width="40" height="9" rx="4.5" opacity="0.4"/>
-    <rect x="1030" y="92" width="48" height="9" rx="4.5" opacity="0.5"/>
+  <g fill="#16A79A">
+    <rect x="770" y="50"  width="66" height="8" rx="4" opacity="0.85"/>
+    <rect x="792" y="82"  width="50" height="8" rx="4" opacity="0.6"/>
+    <rect x="820" y="36"  width="46" height="8" rx="4" opacity="0.5"/>
+    <rect x="836" y="100" width="58" height="8" rx="4" opacity="0.8"/>
+    <rect x="860" y="66"  width="42" height="8" rx="4" opacity="0.55"/>
+    <rect x="884" y="90"  width="38" height="8" rx="4" opacity="0.45"/>
+    <rect x="900" y="48"  width="48" height="8" rx="4" opacity="0.7"/>
+    <rect x="918" y="110" width="36" height="8" rx="4" opacity="0.4"/>
   </g>
 
-  <!-- long read = double helix (glow pass) -->
-  <g stroke="url(#orange)" stroke-width="8" stroke-linecap="round" filter="url(#soft)" opacity="0.6">
-    <path d="M1060 96 Q1105 32 1150 96 Q1195 160 1240 96 Q1285 32 1330 96 Q1375 160 1420 96 Q1465 32 1510 96 Q1555 160 1600 96"/>
-    <path d="M1060 96 Q1105 160 1150 96 Q1195 32 1240 96 Q1285 160 1330 96 Q1375 32 1420 96 Q1465 160 1510 96 Q1555 32 1600 96"/>
+  <!-- long read = double helix (soft glow pass) -->
+  <g stroke="url(#orange)" stroke-width="7" stroke-linecap="round" filter="url(#soft)" opacity="0.45">
+    <path d="M960 70 Q996 30 1032 70 Q1068 110 1104 70 Q1140 30 1176 70 Q1212 110 1248 70"/>
+    <path d="M960 70 Q996 110 1032 70 Q1068 30 1104 70 Q1140 110 1176 70 Q1212 30 1248 70"/>
   </g>
   <!-- rungs -->
-  <g stroke="#FFC49A" stroke-width="3" opacity="0.5">
-    <line x1="1105" y1="64" x2="1105" y2="128"/>
-    <line x1="1195" y1="64" x2="1195" y2="128"/>
-    <line x1="1285" y1="64" x2="1285" y2="128"/>
-    <line x1="1375" y1="64" x2="1375" y2="128"/>
-    <line x1="1465" y1="64" x2="1465" y2="128"/>
-    <line x1="1555" y1="64" x2="1555" y2="128"/>
+  <g stroke="#F4A574" stroke-width="2.6" opacity="0.55">
+    <line x1="996"  y1="40" x2="996"  y2="100"/>
+    <line x1="1068" y1="40" x2="1068" y2="100"/>
+    <line x1="1140" y1="40" x2="1140" y2="100"/>
+    <line x1="1212" y1="40" x2="1212" y2="100"/>
   </g>
   <!-- crisp helix on top -->
-  <g stroke="url(#orange)" stroke-width="6.5" stroke-linecap="round">
-    <path d="M1060 96 Q1105 32 1150 96 Q1195 160 1240 96 Q1285 32 1330 96 Q1375 160 1420 96 Q1465 32 1510 96 Q1555 160 1600 96"/>
-    <path d="M1060 96 Q1105 160 1150 96 Q1195 32 1240 96 Q1285 160 1330 96 Q1375 32 1420 96 Q1465 160 1510 96 Q1555 32 1600 96"/>
+  <g stroke="url(#orange)" stroke-width="6" stroke-linecap="round">
+    <path d="M960 70 Q996 30 1032 70 Q1068 110 1104 70 Q1140 30 1176 70 Q1212 110 1248 70"/>
+    <path d="M960 70 Q996 110 1032 70 Q1068 30 1104 70 Q1140 110 1176 70 Q1212 30 1248 70"/>
   </g>
   <!-- base nodes at the crossings -->
-  <g fill="#FFE0C6">
-    <circle cx="1060" cy="96" r="4"/><circle cx="1150" cy="96" r="4"/>
-    <circle cx="1240" cy="96" r="4"/><circle cx="1330" cy="96" r="4"/>
-    <circle cx="1420" cy="96" r="4"/><circle cx="1510" cy="96" r="4"/>
-    <circle cx="1600" cy="96" r="4"/>
+  <g fill="#F0561F">
+    <circle cx="960"  cy="70" r="3.6"/><circle cx="1032" cy="70" r="3.6"/>
+    <circle cx="1104" cy="70" r="3.6"/><circle cx="1176" cy="70" r="3.6"/>
+    <circle cx="1248" cy="70" r="3.6"/>
   </g>
 
   <!-- copy -->
-  <text x="72" y="58"  fill="#FF9A5C" font-size="19" font-weight="700" letter-spacing="5">LONG-READ SEQUENCING</text>
-  <text x="70" y="112" fill="#FBF7F2" font-size="47" font-weight="800" letter-spacing="-0.6">PacBio HiFi, integrated</text>
-  <text x="72" y="151" fill="#BEB0C8" font-size="22" font-weight="500">How HiFi long reads slot into your short-read pipeline</text>
-  <text x="700" y="151" fill="#FF9A5C" font-size="22" font-weight="700">&#8594;</text>
+  <text x="64" y="44"  fill="#E35E33" font-size="15" font-weight="700" letter-spacing="4">LONG-READ SEQUENCING</text>
+  <text x="62" y="85"  fill="#2C3E50" font-size="37" font-weight="800" letter-spacing="-0.4">PacBio HiFi, integrated</text>
+  <text x="64" y="116" fill="#6B7A8D" font-size="17" font-weight="500">How HiFi long reads slot into your short-read pipeline</text>
+  <text x="556" y="116" fill="#F0561F" font-size="18" font-weight="700">&#8594;</text>
 </svg>
